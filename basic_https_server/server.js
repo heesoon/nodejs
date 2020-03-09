@@ -1,6 +1,7 @@
 const express = require('express');
 const https = require('https');
 const http = require('http');
+const fs = require('fs');
 
 // TLS_RSA_WITH_AES_128_GCM_SHA256 == AES128-GCM-SHA256
 const sslOptions = {
