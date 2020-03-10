@@ -5,9 +5,9 @@ const fs = require('fs');
 
 // TLS_RSA_WITH_AES_128_GCM_SHA256 == AES128-GCM-SHA256
 const sslOptions = {
-		ca : fs.readFileSync('cert/ca_key.pem'),
-        key : fs.readFileSync('cert/key.pem'),
-        cert : fs.readFileSync('cert/cert.pem'),
+		ca : fs.readFileSync('cert/rootca.key'),
+        key : fs.readFileSync('cert/server.key'),
+        cert : fs.readFileSync('cert/server.crt'),
 		ciphers: [
 			// refer to : https://www.acunetix.com/blog/articles/tls-ssl-cipher-hardening/
 			"ECDHE-ECDSA-AES256-GCM-SHA384",
