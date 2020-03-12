@@ -27,6 +27,12 @@ openssl x509 -req \
 -out rootca.crt \
 -extfile rootca_openssl.conf
 
+#openssl req -new \
+#-x509 -days 365 \
+#-config rootca_openssl.cnf \
+#-key out rootca.key \
+#-out rootca.crt
+
 echo "success certification for root CA"
 
 echo "identify ca certification ..... "
@@ -43,7 +49,7 @@ echo "success generate server private key"
 
 openssl req -new \
 -key server.key \
--subj '/C=KR/ST=Seoul/O=LGE/OU=LGE/CN=lge/' \
+-subj '/C=KR/ST=Seoul/O=LGE/OU=ID/CN=signage.lge.com/' \
 -out server.csr \
 -config server_openssl.conf \
 
