@@ -16,7 +16,7 @@ export const decrement = createAction(DECREMENT);
 export const setColor = createAction(SET_COLOR);
 
 const initialState = Map({
-	counter : List([
+	counters : List([
 		Map({
 			color : 'black',
 			number : 0
@@ -26,7 +26,7 @@ const initialState = Map({
 
 export default handleActions({
 	[CREATE]: (state, action) => {
-		const counter = state.get('counters');
+		const counters = state.get('counters');
 		
 		return state.set('counters', counters.push(
 			Map({
